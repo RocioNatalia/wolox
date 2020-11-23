@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {ApiWoloxService} from './services/apiWolox.service';
 import {PagesModule} from './pages/pages.module';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import {HttpClientModule} from '@angular/common/http';
     PagesModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ApiWoloxService

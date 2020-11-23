@@ -2,18 +2,25 @@
   <div class="titulo">
     <div>
       Listado de <b style="color: #9fcb2c">tecnologías</b>
-      <p>Total - {{listado.length}}</p>
+      <p>Favoritos - {{cantidadFav}} / {{listado.length}} </p>
     </div>
     <div class="buscador">
       <input
         [(ngModel)]="textobuscar"
         (keyup)="filtrar()"
         placeholder="Buscar">
+      <div class="btn-ordenar" (click)="ordenarLista()">Ordenar A-Z</div>
     </div>
+
+
   </div>
   <div class="listado">
     <div class="card" *ngFor="let item of listado">
       <div class="title">
+        <div class="btn-favorito" (click)="item.favorito? item.favorito=false : item.favorito=true ; guardarListado()"
+             [ngClass]="item.favorito ? 'fav' : 'nofav' ">
+          fav
+        </div>
         {{item.tech}}
       </div>
       <div class="lenguaje">

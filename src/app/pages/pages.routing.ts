@@ -5,7 +5,7 @@ import {NgModule} from '@angular/core';
 import {ListadoComponent} from './listado/listado.component';
 
 const routes: Routes = [
-  {path: 'register', component: RegistroComponent, canActivate: [AuthGuard]},
+  {path: 'register', component: RegistroComponent},
   {path: 'listado', component: ListadoComponent, canActivate: [AuthGuard]},
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];

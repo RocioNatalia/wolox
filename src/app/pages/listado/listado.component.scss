@@ -15,8 +15,10 @@
     }
 
     .buscador {
-      text-align: end;
+
       width: 67vw;
+      display: grid;
+      justify-items: end;
 
       input {
         border: solid 1px #dbdbe5;
@@ -24,12 +26,30 @@
         border-radius: 2vw;
         width: 20vw;
 
-        &:focus{
+        &:focus {
           color: #36373a;
-          outline:none;
+          outline: none;
           border: solid 1px #3caadc;
         }
 
+      }
+
+      .btn-ordenar{
+        background-color: #FFFFFF;
+        border: solid 1px #9fcb2c;
+        border-radius: 2vw;
+        width: 13vw;
+        padding: 1.2vw;
+        font-size: 1.5vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 1vw;
+
+        &:hover{
+          background-color: #9fcb2c;
+          color: #FFFFFF;
+          cursor : pointer;
+        }
       }
     }
   }
@@ -51,6 +71,8 @@
       .title {
         font-size: 2vw;
         color: #3caadc;
+        display: flex;
+        align-items: center;
       }
 
       .lenguaje {
@@ -68,11 +90,40 @@
           width: 15vw;
         }
       }
-      .data{
-        p{
+
+      .data {
+        p {
           font-size: 1.2vw;
         }
       }
+
+
     }
   }
+}
+
+
+.btn-favorito {
+  width: 2.5vw;
+  height: 2vw;
+  font-size: 1vw;
+  border-radius: 10vw;
+  margin-right: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fav {
+  background-color: #9fcb2c;
+  color: #4c5d15;
+}
+
+.nofav {
+  background-color: #a9a9ab;
+  color: #36373a;
 }

@@ -3,7 +3,7 @@ import {RegistroComponent} from './registro/registro.component';
 import {RouterModule} from '@angular/router';
 import {ListadoComponent} from './listado/listado.component';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import {FormsModule} from '@angular/forms';
   imports: [
     RouterModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports : []
 })

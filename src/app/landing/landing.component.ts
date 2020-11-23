@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
 
 export class LandingComponent {
   public beneficios: Beneficio[];
+  public logueado: boolean;
 
   constructor() {
     this.beneficios = [
@@ -16,8 +17,15 @@ export class LandingComponent {
       {texto: 'Capacitaciones y Workshops', imagen: 'Ic_Workshops.svg'},
       {texto: 'Snacks, frutas y bebidas gratis', imagen: 'Ic_DrinkSnacks.svg'},
       {texto: 'Semana Remota', imagen: 'Ic_laptop.svg'},
-      {texto: 'Trabajar en últimas tecnologías', imagen: 'Ic_brain.svg'}, ];
+      {texto: 'Trabajar en últimas tecnologías', imagen: 'Ic_brain.svg'},];
 
+    sessionStorage.getItem('token') ? this.logueado = true : this.logueado = false;
+
+  }
+
+  cerrarsesion(): void {
+    sessionStorage.clear();
+    this.logueado = false;
   }
 }
 

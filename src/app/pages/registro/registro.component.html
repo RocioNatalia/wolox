@@ -1,1 +1,93 @@
-hola registo
+<div class="formulario">
+  <form [formGroup]="registroForm">
+    <div class="titulo">Complete los datos</div>
+
+    <div class="labels">
+      <label for="nombre">Nombre</label>
+      <label for="apellido">Apellido</label>
+    </div>
+    <div class="input">
+      <input
+        id="nombre"
+        formControlName="nameCtrl"
+        maxlength="30"
+        placeholder="Nombre">
+      <input
+        id="apellido"
+        formControlName="lastnameCtrl"
+        maxlength="30"
+        placeholder="Apellido">
+    </div>
+
+    <div class="labels"><label for="pais">Seleccione un País</label>
+      <label for="prov">Seleccione una Provincia</label>
+    </div>
+
+    <div class="input">
+      <select
+        id="pais"
+        formControlName="paisCtrl"
+        (change)="cargarProvincias()">
+        <option *ngFor="let pais of paises" [ngValue]="pais">{{pais.pais}}</option>
+      </select>
+
+      <select
+        id="prov"
+        formControlName="provinciaCtrl">
+        <option *ngFor="let provincia of provicias" [ngValue]="provincia">{{provincia}}</option>
+      </select>
+    </div>
+
+    <div class="labels">
+      <label for="email">Email</label>
+      <label for="telefono">Teléfono</label>
+    </div>
+
+    <div class="input">
+      <input
+        id="email"
+        [pattern]="'[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'"
+        type="email"
+        formControlName="emailCtrl"
+        placeholder="E-mail">
+      <input
+        id="telefono"
+        type="text"
+        formControlName="telefonoCtrl"
+        maxlength="10"
+        [pattern]="'^(0|[1-9][0-9]*)$'"
+        placeholder="Telefono">
+    </div>
+
+    <div class="labels">
+      <label for="pass1">Contraseña</label>
+      <label for="pass2">Repetir contraseña</label>
+    </div>
+    <div class="input">
+      <input id="pass1"
+             formControlName="passCtrl"
+             type="password" placeholder="Contraseña">
+      <input id="pass2"
+             formControlName="passrepeatCtrl"
+             type="password" placeholder="Repetir contraseña">
+    </div>
+
+    <div style="margin: 2vw;font-size: 1.5vw;">
+      <input id="terminos"
+             formControlName="terminosCtrl"
+             type="checkbox">
+      <label for="terminos"><a href="https://www.wolox.com.ar/" target="_blank">Acepto los términos y condiciones</a></label>
+    </div>
+
+    <div style="text-align: center">
+      <button class="registro-btn" (click)="registar()">Registar</button>
+    </div>
+    <p style="text-align: center">
+      <b>{{mensaje}}</b>
+    </p>
+    <p style="text-align: center; color: red">
+      <b>{{mensajeError}}</b>
+    </p>
+
+  </form>
+</div>
