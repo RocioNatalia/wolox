@@ -1,0 +1,78 @@
+.content {
+  color: #36373a;
+
+  .titulo {
+    display: flex;
+    padding: 2vw;
+    font-size: 2vw;
+    background-image: url("~src/assets/backgrounds/Bg_Header.png");
+    background-size: cover;
+    border-bottom: solid 1px #dbdbe5;
+
+    p {
+      margin: 1vw 0;
+      font-size: 1.3vw;
+    }
+
+    .buscador {
+      text-align: end;
+      width: 67vw;
+
+      input {
+        border: solid 1px #dbdbe5;
+        padding: 1.2vw;
+        border-radius: 2vw;
+        width: 20vw;
+
+        &:focus{
+          color: #36373a;
+          outline:none;
+          border: solid 1px #3caadc;
+        }
+
+      }
+    }
+  }
+
+  .listado {
+    padding: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .card {
+      margin: 2vw 0;
+      padding: 3vw;
+      width: 20vw;
+      height: 30vw;
+      border-radius: 2vw;
+      box-shadow: 0 0 15px #ddd;
+
+      .title {
+        font-size: 2vw;
+        color: #3caadc;
+      }
+
+      .lenguaje {
+        font-size: 1.5vw;
+      }
+
+      .logo {
+        display: flex;
+        padding: 2vw;
+        height: 15vw;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 15vw;
+        }
+      }
+      .data{
+        p{
+          font-size: 1.2vw;
+        }
+      }
+    }
+  }
+}

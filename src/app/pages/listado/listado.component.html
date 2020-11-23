@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="titulo">
+    <div>
+      Listado de <b style="color: #9fcb2c">tecnologías</b>
+      <p>Total - {{listado.length}}</p>
+    </div>
+    <div class="buscador">
+      <input
+        [(ngModel)]="textobuscar"
+        (keyup)="filtrar()"
+        placeholder="Buscar">
+    </div>
+  </div>
+  <div class="listado">
+    <div class="card" *ngFor="let item of listado">
+      <div class="title">
+        {{item.tech}}
+      </div>
+      <div class="lenguaje">
+        {{item.language}} -
+        <b> {{item.type}}</b>
+      </div>
+      <div class="logo">
+        <img src="{{item.logo}}">
+      </div>
+      <div class="data">
+        <p>{{item.year}} - {{item.author}}</p>
+        <p>{{item.license}}</p>
+      </div>
+    </div>
+  </div>
+</div>
