@@ -1,1 +1,63 @@
-LALALA
+<div class="content">
+  <div class="navegacion">
+    <div class="imagen-logo">
+      <img src="assets/images/logo_full_color.svg">
+    </div>
+    <div class="navegacion-links">
+      <a [href]="'/home#inicio'">Inicio</a>
+      <a [href]="'/home#beneficios'" >Beneficios</a>
+      <a class="btn-login" [routerLink]="'/register'"> Login</a>
+    </div>
+  </div>
+
+  <div id="bienvenida">
+    <p>Bienvenido a tu</p>
+    <p><b>entevista técnica</b> en</p>
+    <p><b style="color: #9fcb2c">Wolox</b></p>
+  </div>
+
+  <div class="imagen-der">
+    <img src="assets/images/Ic_ilustra_Hero.png">
+  </div>
+
+  <div class="twitter-link">
+    <p style="font-size: 4.5vw"><b style="color:#9fcb2c">350 + </b> <b style="color:  #3caadc">Woloxers</b></p>
+    <div class="logo-twitter">
+      <img src="assets/images/logo-twitter.png">
+      @wolox
+    </div>
+    <div>
+      <a class="btn-seguir" href="https://twitter.com/Wolox" target="_blank">Seguinos</a>
+    </div>
+  </div>
+
+  <div class="gris-bg">
+    <p>Trabajamos para <b style="color: #3caadc">convertir </b><b style="color: #9fcb2c">ideas</b> en productos</p>
+  </div>
+
+  <div id="beneficios">
+    <p style="font-size: 2.5vw">Entre los beneficios que ofrecemos se encuentran <b
+      style="color: #3caadc; font-weight: normal">;)</b></p>
+
+    <div class="beneficio">
+    <div *ngFor="let beneficio of beneficios">
+        <div class="imagen"><img src="assets/images/{{beneficio.imagen}}"></div>
+        <div class="texto">{{beneficio.texto}}</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="texto-footer">
+      <div class="titulo"> Gracias por <b>completar el ejercicio</b></div>
+      <div class="subtitulo">Te invitamos a ver más información</div>
+      <div style="margin: 4vw;">
+        <a class="btn-conocer" href="https://www.wolox.com.ar/" target="_blank"> Conocer más</a>
+      </div>
+    </div>
+    <div class="logo-footer">
+      <img src="assets/images/Ic_Wolox_Footer.svg">
+    </div>
+  </div>
+
+</div>

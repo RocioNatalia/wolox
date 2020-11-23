@@ -1,0 +1,197 @@
+.content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  row-gap: 3vw;
+  color: #36373a;
+
+  .navegacion {
+    background-image: url("~src/assets/backgrounds/Bg_Header.png");
+    background-size: cover;
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    padding: 3vw 3vw 2vw 3vw;
+
+    .imagen-logo {
+      img {
+        height: 2.5vw;
+      }
+    }
+
+    .navegacion-links {
+      width: 72vw;
+      text-align: end;
+
+      a {
+        color: #36373a;
+        text-decoration: none;
+        font-size: 1.5vw;
+        font-weight: bold;
+        padding: 0 3vw;
+      }
+      .btn-login{
+        color: #3caadc;
+        background-color: #FFFFFF;
+        font-size: 1.3vw;
+        font-weight: normal;
+        text-decoration: none;
+        padding: 1vw 5.5vw;
+        border: solid 1px #3caadc;
+        border-radius: 10vw;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+  #bienvenida {
+    align-self: center;
+    margin-left: 2vw;
+    grid-column: 1;
+    width: 50vw;
+
+    p {
+      font-size: 4vw;
+      margin: 0;
+    }
+  }
+
+  .imagen-der {
+    grid-column: 2;
+
+    img {
+      height: 40vw;
+      margin-right: 7vw;
+      margin-left: 1vw;
+    }
+  }
+
+  .twitter-link {
+    grid-column: 1;
+    background-image: url("~src/assets/images/img_woloxer.png");
+    background-size: cover;
+    padding: 7vw;
+    text-align: center;
+
+
+    .logo-twitter {
+      color: #f2f3fb;
+      font-size: 1.8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 2.5vw;
+
+      img {
+        width: 3.5vw;
+      }
+
+    }
+
+    .btn-seguir {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 1.6vw;
+      padding: 1vw 5.5vw;
+      border: solid 2px #3caadc;
+      border-radius: 10vw;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .gris-bg {
+    padding: 6vw;
+    text-align: center;
+    font-size: 3.5vw;
+    grid-column: 2;
+    background-color: #f2f3fb;
+  }
+
+  #beneficios {
+    text-align: center;
+    grid-column: 1/3;
+    margin-top: 3vw;
+
+    .beneficio {
+      margin-top: 7vw;
+      display: flex;
+      justify-content: space-around;
+
+      .imagen {
+        width: 12vw;
+        height: 10vw;
+        padding-bottom: 1vw;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 8vw;
+        }
+      }
+
+      .texto {
+        width: 12vw;
+        font-size: 1.5vw;
+      }
+    }
+  }
+
+  .footer {
+    grid-column: 1/3;
+    height: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    background-image: url("~src/assets/backgrounds/Bg_Footer.png");
+    background-size: cover;
+
+    .texto-footer {
+      margin-top: 3vw;
+
+      .titulo {
+        font-size: 3.5vw;
+        margin: 1vw;
+
+        b {
+          font-weight: normal;
+          color: #3caadc;
+        }
+      }
+
+      .subtitulo {
+        margin: 1vw;
+        font-size: 2.5vw;
+      }
+
+      .btn-conocer {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 1.6vw;
+        font-weight: bold;
+        background-color: #3caadc;
+        padding: 1.5vw 5.5vw;
+        border: none;
+        border-radius: 10vw;
+        box-shadow: 0 0 15px #ddd;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .logo-footer {
+      width: 100%;
+    }
+  }
+
+}
+
